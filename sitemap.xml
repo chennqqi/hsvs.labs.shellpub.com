@@ -3,87 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>hsvs/%E7%AE%80%E4%BB%8B/</loc>
+    <loc>/%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2018-04-02T15:42:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E7%AE%80%E4%BB%8B/1/</loc>
+    <loc>/%E7%AE%80%E4%BB%8B/1/</loc>
     <lastmod>2018-04-02T21:48:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E5%AE%89%E8%A3%85/standalone/</loc>
+    <loc>/%E5%AE%89%E8%A3%85/standalone/</loc>
     <lastmod>2018-04-02T21:48:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E5%AE%89%E8%A3%85/</loc>
+    <loc>/%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-04-02T15:42:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E5%AE%89%E8%A3%85/cluster_intra/</loc>
+    <loc>/%E5%AE%89%E8%A3%85/cluster_intra/</loc>
     <lastmod>2018-01-28T21:48:10+01:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E5%AE%89%E8%A3%85/cluster_pub/</loc>
+    <loc>/%E5%AE%89%E8%A3%85/cluster_pub/</loc>
     <lastmod>2018-04-02T21:48:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E7%94%A8%E6%B3%95/</loc>
+    <loc>/%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2018-04-02T22:01:36+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E9%99%84%E5%BD%95/</loc>
+    <loc>/%E9%99%84%E5%BD%95/</loc>
     <lastmod>2018-04-02T22:01:36+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E9%99%84%E5%BD%95/dict/</loc>
+    <loc>/%E9%99%84%E5%BD%95/dict/</loc>
     <lastmod>2018-04-02T21:57:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E7%94%A8%E6%B3%95/work/</loc>
+    <loc>/%E7%94%A8%E6%B3%95/work/</loc>
     <lastmod>2018-04-02T21:55:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E7%94%A8%E6%B3%95/security/</loc>
+    <loc>/%E7%94%A8%E6%B3%95/security/</loc>
     <lastmod>2018-04-02T21:57:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E9%99%84%E5%BD%95/faq/</loc>
+    <loc>/%E9%99%84%E5%BD%95/faq/</loc>
     <lastmod>2018-04-02T21:55:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E9%99%84%E5%BD%95/contact/</loc>
+    <loc>/%E9%99%84%E5%BD%95/contact/</loc>
     <lastmod>2018-04-02T21:55:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>hsvs/%E7%94%A8%E6%B3%95/ana_interface/</loc>
+    <loc>/%E7%94%A8%E6%B3%95/ana_interface/</loc>
   </url>
   
   <url>
-    <loc>hsvs/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>hsvs/</loc>
+    <loc>/</loc>
     <lastmod>2018-04-02T21:48:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>hsvs/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   

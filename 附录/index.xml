@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>附录 on HSVS-HTTP全流量可视化系统</title>
-    <link>hsvs/%E9%99%84%E5%BD%95/</link>
+    <link>/%E9%99%84%E5%BD%95/</link>
     <description>Recent content in 附录 on HSVS-HTTP全流量可视化系统</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 02 Apr 2018 22:01:36 +0800</lastBuildDate>
     
-	<atom:link href="hsvs/%E9%99%84%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/%E9%99%84%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>数据字典</title>
-      <link>hsvs/%E9%99%84%E5%BD%95/dict/</link>
+      <link>/%E9%99%84%E5%BD%95/dict/</link>
       <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
       
-      <guid>hsvs/%E9%99%84%E5%BD%95/dict/</guid>
+      <guid>/%E9%99%84%E5%BD%95/dict/</guid>
       <description>数据字典   字段 类型 描述    @timestamp   date   字符串形式的时间戳，ES,Kibana使用     bodyb64   boolean   相应体是否使用base64处理（body传输时开启gzip会有此字段）    cap_ip   string   本记录抓取源网卡IP     cap_source   string   本记录抓取源网卡MAC地址     cap_timens   number   本记录抓取时刻秒以下时间ns     connectIP   ip   连接者IP     dst   ip   目的地址IP     extention   string   请求文件(URI)扩展名     geo_city   string   客户端地理位置-城市     geo_country   string   客户端地理位置-国家     kafka_pid   number   如果消息队列为kafka时, 本字段可以用来追踪消息均衡     raw_time   date   从网卡抓取到的UTC时间戳     realIP   ip   真实IP     realUrl   string   真实Url，不含参数     request.</description>
     </item>
     
     <item>
       <title>FAQ</title>
-      <link>hsvs/%E9%99%84%E5%BD%95/faq/</link>
+      <link>/%E9%99%84%E5%BD%95/faq/</link>
       <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
       
-      <guid>hsvs/%E9%99%84%E5%BD%95/faq/</guid>
+      <guid>/%E9%99%84%E5%BD%95/faq/</guid>
       <description> 常见问题  怎么解决使用了HTTPS证书后无法获取加密的流量
 将HTTPS部署到反向代理上，通过反向代理之后卸载TLS流量；此时在通过在反向代理上利用端口过滤的方式拿出所需要的解密后的流量  是否支持GZIP?
 支持，默认情况下，对于静态资源的response.body会被drop掉内容。对于超长的会截断内容  kafka资源数量估计(kafka分区数，kafka broker数量)
@@ -37,10 +37,10 @@ ps -ef 查看容器id 进入docker容器 docker exec -it &amp;lt;id&amp;gt; /bin
     
     <item>
       <title>联系我们</title>
-      <link>hsvs/%E9%99%84%E5%BD%95/contact/</link>
+      <link>/%E9%99%84%E5%BD%95/contact/</link>
       <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
       
-      <guid>hsvs/%E9%99%84%E5%BD%95/contact/</guid>
+      <guid>/%E9%99%84%E5%BD%95/contact/</guid>
       <description>邮箱: q@shellpub.com</description>
     </item>
     

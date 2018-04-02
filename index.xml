@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HSVS-HTTP全流量可视化系统</title>
-    <link>hsvs/</link>
+    <link>/</link>
     <description>Recent content on HSVS-HTTP全流量可视化系统</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 02 Apr 2018 21:48:10 +0800</lastBuildDate>
     
-	<atom:link href="hsvs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>功能特点</title>
-      <link>hsvs/%E7%AE%80%E4%BB%8B/1/</link>
+      <link>/%E7%AE%80%E4%BB%8B/1/</link>
       <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
       
-      <guid>hsvs/%E7%AE%80%E4%BB%8B/1/</guid>
+      <guid>/%E7%AE%80%E4%BB%8B/1/</guid>
       <description>特性  一键部署 开箱即用 分析接口开放 数据接口开放 地理位置解析 真实IP提取 智能状态码、UID、手机号 支持流量镜像  项目结构 抓取模块
 消息队列
 基础分析程序
@@ -25,10 +25,10 @@ ES+kibna 分析展示模块</description>
     
     <item>
       <title>单机版</title>
-      <link>hsvs/%E5%AE%89%E8%A3%85/standalone/</link>
+      <link>/%E5%AE%89%E8%A3%85/standalone/</link>
       <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
       
-      <guid>hsvs/%E5%AE%89%E8%A3%85/standalone/</guid>
+      <guid>/%E5%AE%89%E8%A3%85/standalone/</guid>
       <description> 适用场景 业务量较小的网站或者公司，完整集成包，开箱即用。
 需求  空闲内存&amp;gt;1.5GB (内置ES内存限制为1G， 如果内存较大可以手动修改，配置不要超过系统内存的一半) tps &amp;lt; 3000 cpu核心数&amp;gt;=2  部署方式 1.流量镜像模式；
 2.直接在反向代理部署, 确保你的反向代理开启了X_FORWARD_FOF；
@@ -46,10 +46,10 @@ docker参数说明
     
     <item>
       <title>集群-内网版*</title>
-      <link>hsvs/%E5%AE%89%E8%A3%85/cluster_intra/</link>
+      <link>/%E5%AE%89%E8%A3%85/cluster_intra/</link>
       <pubDate>Sun, 28 Jan 2018 21:48:10 +0100</pubDate>
       
-      <guid>hsvs/%E5%AE%89%E8%A3%85/cluster_intra/</guid>
+      <guid>/%E5%AE%89%E8%A3%85/cluster_intra/</guid>
       <description> 适用场景 企业内网，IDC机房。 可以采用两种部署模式：
 1. 流量镜像模式；
 2. 直接在反向代理部署；
@@ -60,29 +60,29 @@ docker参数说明
     
     <item>
       <title>集群-公网版*</title>
-      <link>hsvs/%E5%AE%89%E8%A3%85/cluster_pub/</link>
+      <link>/%E5%AE%89%E8%A3%85/cluster_pub/</link>
       <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
       
-      <guid>hsvs/%E5%AE%89%E8%A3%85/cluster_pub/</guid>
+      <guid>/%E5%AE%89%E8%A3%85/cluster_pub/</guid>
       <description>适用场景 租借服务器，跨机房或者业务在共有云上。
 获取程序 程序猿宝宝们正在紧急开发当中，留下您的联系方式，完成后第一时间通知您</description>
     </item>
     
     <item>
       <title>数据字典</title>
-      <link>hsvs/%E9%99%84%E5%BD%95/dict/</link>
+      <link>/%E9%99%84%E5%BD%95/dict/</link>
       <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
       
-      <guid>hsvs/%E9%99%84%E5%BD%95/dict/</guid>
+      <guid>/%E9%99%84%E5%BD%95/dict/</guid>
       <description>数据字典   字段 类型 描述    @timestamp   date   字符串形式的时间戳，ES,Kibana使用     bodyb64   boolean   相应体是否使用base64处理（body传输时开启gzip会有此字段）    cap_ip   string   本记录抓取源网卡IP     cap_source   string   本记录抓取源网卡MAC地址     cap_timens   number   本记录抓取时刻秒以下时间ns     connectIP   ip   连接者IP     dst   ip   目的地址IP     extention   string   请求文件(URI)扩展名     geo_city   string   客户端地理位置-城市     geo_country   string   客户端地理位置-国家     kafka_pid   number   如果消息队列为kafka时, 本字段可以用来追踪消息均衡     raw_time   date   从网卡抓取到的UTC时间戳     realIP   ip   真实IP     realUrl   string   真实Url，不含参数     request.</description>
     </item>
     
     <item>
       <title>业务</title>
-      <link>hsvs/%E7%94%A8%E6%B3%95/work/</link>
+      <link>/%E7%94%A8%E6%B3%95/work/</link>
       <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
       
-      <guid>hsvs/%E7%94%A8%E6%B3%95/work/</guid>
+      <guid>/%E7%94%A8%E6%B3%95/work/</guid>
       <description> 本文档重点不是kibana的使用教程，只是举了几个kibana使用的例子。
 业务场景 1.使用Kibana分析请求量及其变化趋势
  在kibana-&amp;gt;Visualize 点击+号新建 Vertical Bar 选择logstash-http-session-* index 在Split Series中选择Date Historgram作为聚合方式  2.使用kibana分析各域名访问量
@@ -97,10 +97,10 @@ docker参数说明
     
     <item>
       <title>安全</title>
-      <link>hsvs/%E7%94%A8%E6%B3%95/security/</link>
+      <link>/%E7%94%A8%E6%B3%95/security/</link>
       <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
       
-      <guid>hsvs/%E7%94%A8%E6%B3%95/security/</guid>
+      <guid>/%E7%94%A8%E6%B3%95/security/</guid>
       <description> 场景 1.使用流量发现WEBSHELL
 待更新  2.使用流量进行攻击检测
 待更新  3.使用流量进行登录监控
@@ -109,10 +109,10 @@ docker参数说明
     
     <item>
       <title>FAQ</title>
-      <link>hsvs/%E9%99%84%E5%BD%95/faq/</link>
+      <link>/%E9%99%84%E5%BD%95/faq/</link>
       <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
       
-      <guid>hsvs/%E9%99%84%E5%BD%95/faq/</guid>
+      <guid>/%E9%99%84%E5%BD%95/faq/</guid>
       <description> 常见问题  怎么解决使用了HTTPS证书后无法获取加密的流量
 将HTTPS部署到反向代理上，通过反向代理之后卸载TLS流量；此时在通过在反向代理上利用端口过滤的方式拿出所需要的解密后的流量  是否支持GZIP?
 支持，默认情况下，对于静态资源的response.body会被drop掉内容。对于超长的会截断内容  kafka资源数量估计(kafka分区数，kafka broker数量)
@@ -124,19 +124,19 @@ ps -ef 查看容器id 进入docker容器 docker exec -it &amp;lt;id&amp;gt; /bin
     
     <item>
       <title>联系我们</title>
-      <link>hsvs/%E9%99%84%E5%BD%95/contact/</link>
+      <link>/%E9%99%84%E5%BD%95/contact/</link>
       <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
       
-      <guid>hsvs/%E9%99%84%E5%BD%95/contact/</guid>
+      <guid>/%E9%99%84%E5%BD%95/contact/</guid>
       <description>邮箱: q@shellpub.com</description>
     </item>
     
     <item>
       <title>分析接口</title>
-      <link>hsvs/%E7%94%A8%E6%B3%95/ana_interface/</link>
+      <link>/%E7%94%A8%E6%B3%95/ana_interface/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>hsvs/%E7%94%A8%E6%B3%95/ana_interface/</guid>
+      <guid>/%E7%94%A8%E6%B3%95/ana_interface/</guid>
       <description></description>
     </item>
     

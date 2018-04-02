@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>安装 on HSVS-HTTP全流量可视化系统</title>
-    <link>hsvs/%E5%AE%89%E8%A3%85/</link>
+    <link>/%E5%AE%89%E8%A3%85/</link>
     <description>Recent content in 安装 on HSVS-HTTP全流量可视化系统</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 02 Apr 2018 15:42:17 +0800</lastBuildDate>
     
-	<atom:link href="hsvs/%E5%AE%89%E8%A3%85/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/%E5%AE%89%E8%A3%85/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>单机版</title>
-      <link>hsvs/%E5%AE%89%E8%A3%85/standalone/</link>
+      <link>/%E5%AE%89%E8%A3%85/standalone/</link>
       <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
       
-      <guid>hsvs/%E5%AE%89%E8%A3%85/standalone/</guid>
+      <guid>/%E5%AE%89%E8%A3%85/standalone/</guid>
       <description> 适用场景 业务量较小的网站或者公司，完整集成包，开箱即用。
 需求  空闲内存&amp;gt;1.5GB (内置ES内存限制为1G， 如果内存较大可以手动修改，配置不要超过系统内存的一半) tps &amp;lt; 3000 cpu核心数&amp;gt;=2  部署方式 1.流量镜像模式；
 2.直接在反向代理部署, 确保你的反向代理开启了X_FORWARD_FOF；
@@ -34,10 +34,10 @@ docker参数说明
     
     <item>
       <title>集群-内网版*</title>
-      <link>hsvs/%E5%AE%89%E8%A3%85/cluster_intra/</link>
+      <link>/%E5%AE%89%E8%A3%85/cluster_intra/</link>
       <pubDate>Sun, 28 Jan 2018 21:48:10 +0100</pubDate>
       
-      <guid>hsvs/%E5%AE%89%E8%A3%85/cluster_intra/</guid>
+      <guid>/%E5%AE%89%E8%A3%85/cluster_intra/</guid>
       <description> 适用场景 企业内网，IDC机房。 可以采用两种部署模式：
 1. 流量镜像模式；
 2. 直接在反向代理部署；
@@ -48,10 +48,10 @@ docker参数说明
     
     <item>
       <title>集群-公网版*</title>
-      <link>hsvs/%E5%AE%89%E8%A3%85/cluster_pub/</link>
+      <link>/%E5%AE%89%E8%A3%85/cluster_pub/</link>
       <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
       
-      <guid>hsvs/%E5%AE%89%E8%A3%85/cluster_pub/</guid>
+      <guid>/%E5%AE%89%E8%A3%85/cluster_pub/</guid>
       <description>适用场景 租借服务器，跨机房或者业务在共有云上。
 获取程序 程序猿宝宝们正在紧急开发当中，留下您的联系方式，完成后第一时间通知您</description>
     </item>
