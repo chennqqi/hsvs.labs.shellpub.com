@@ -9,7 +9,7 @@ pygmentsStyle = "monokailight"
 
 
 [[menu.shortcuts]]
-name = "其他产品"
+name = "主站"
 url = "http://www.shellpub.com"
 #weight = 20
 
