@@ -1,5 +1,5 @@
 #baseURL = "http://example.org/"
-baseURL = "hsvs"
+baseURL = ""
 languageCode = "zh-cn"
 title = "HSVS-HTTP全流量可视化系统"
 theme = "kraiklyn"
@@ -8,9 +8,9 @@ pygmentsCodeFences = true
 pygmentsStyle = "monokailight"
 
 
-#[[menu.shortcuts]]
-#name = "官网"
-#url = "http://www.shellpub.com"
+[[menu.shortcuts]]
+name = "其他产品"
+url = "http://www.shellpub.com"
 #weight = 20
 
 
