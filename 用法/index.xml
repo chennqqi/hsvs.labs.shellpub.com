@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>使用 on HSVS-HTTP全流量可视化系统</title>
+    <link>hsvs/%E7%94%A8%E6%B3%95/</link>
+    <description>Recent content in 使用 on HSVS-HTTP全流量可视化系统</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Apr 2018 22:01:36 +0800</lastBuildDate>
+    
+	<atom:link href="hsvs/%E7%94%A8%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>业务</title>
+      <link>hsvs/%E7%94%A8%E6%B3%95/work/</link>
+      <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
+      
+      <guid>hsvs/%E7%94%A8%E6%B3%95/work/</guid>
+      <description> 本文档重点不是kibana的使用教程，只是举了几个kibana使用的例子。
+业务场景 1.使用Kibana分析请求量及其变化趋势
+ 在kibana-&amp;gt;Visualize 点击+号新建 Vertical Bar 选择logstash-http-session-* index 在Split Series中选择Date Historgram作为聚合方式  2.使用kibana分析各域名访问量
+ 在kibana-&amp;gt;Visualize 点击+号新建 Pie 选择logstash-http-session-* index 在Split Slices中选择terms作为聚合方式， 并选择request.host作为Field  3.使用kibana分析HTTP服务状态比例
+ 在kibana-&amp;gt;Visualize 点击+号新建 Pie 选择logstash-http-session-* index 在Split Slices中选择terms作为聚合方式， 并选择response.code作为Field   分析各个城市活跃量(地图)
+在kibana-&amp;gt;Visualize 点击+号新建 Coordinate Map 选择logstash-http-session-* index 在Geo Coordinates 选择geo_location作为地图坐标   在kibana vi
+ 分析请求量TOP N的接口
+ 分析请求量TOP N的客户端IP
+ 其他&amp;hellip;
+  </description>
+    </item>
+    
+    <item>
+      <title>安全</title>
+      <link>hsvs/%E7%94%A8%E6%B3%95/security/</link>
+      <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
+      
+      <guid>hsvs/%E7%94%A8%E6%B3%95/security/</guid>
+      <description> 场景 1.使用流量发现WEBSHELL
+待更新  2.使用流量进行攻击检测
+待更新  3.使用流量进行登录监控
+待更新  </description>
+    </item>
+    
+    <item>
+      <title>分析接口</title>
+      <link>hsvs/%E7%94%A8%E6%B3%95/ana_interface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>hsvs/%E7%94%A8%E6%B3%95/ana_interface/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

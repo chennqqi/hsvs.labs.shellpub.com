@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HSVS-HTTP全流量可视化系统</title>
+    <link>hsvs/</link>
+    <description>Recent content on HSVS-HTTP全流量可视化系统</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Apr 2018 21:48:10 +0800</lastBuildDate>
+    
+	<atom:link href="hsvs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>功能特点</title>
+      <link>hsvs/%E7%AE%80%E4%BB%8B/1/</link>
+      <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
+      
+      <guid>hsvs/%E7%AE%80%E4%BB%8B/1/</guid>
+      <description>特性  一键部署 开箱即用 分析接口开放 数据接口开放 地理位置解析 真实IP提取 智能状态码、UID、手机号 支持流量镜像  项目结构 抓取模块
+消息队列
+基础分析程序
+ES+kibna 分析展示模块</description>
+    </item>
+    
+    <item>
+      <title>单机版</title>
+      <link>hsvs/%E5%AE%89%E8%A3%85/standalone/</link>
+      <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
+      
+      <guid>hsvs/%E5%AE%89%E8%A3%85/standalone/</guid>
+      <description> 适用场景 业务量较小的网站或者公司，完整集成包，开箱即用。
+需求  空闲内存&amp;gt;1.5GB (内置ES内存限制为1G， 如果内存较大可以手动修改，配置不要超过系统内存的一半) tps &amp;lt; 3000 cpu核心数&amp;gt;=2  部署方式 1.流量镜像模式；
+2.直接在反向代理部署, 确保你的反向代理开启了X_FORWARD_FOF；
+3.如果使用了HTTPS，可以结合1，2两种方案进行, 在反向代理抓取HTTPS卸载之后的流量，在镜像抓取纯HTTP流量
+依赖  docker  获取程序  运行说明  首先应当在您的环境下安装Docker 导入docker镜像
+docker load sort/
+ 运行
+docker run
+docker参数说明
+-p docker 端口，将docker内部的kibana和elasticsearch端口映射到主机 --privilged=true 开启root权限，允许docker程序抓包 --net=host 使用主机网络，这样docker里程序可以抓取主机流量  运行参数说明
+-i &amp;lt;ethname&amp;gt; 指定网卡名称 -f &amp;lt;port filter&amp;gt; 可选， 指定过滤端口信息，如果不加此选项默认会处理所有端口，这个选项在https反代抓包时很有用  打开kibana即可访问
+单机版启动时间大约为1分钟
+  </description>
+    </item>
+    
+    <item>
+      <title>集群-内网版*</title>
+      <link>hsvs/%E5%AE%89%E8%A3%85/cluster_intra/</link>
+      <pubDate>Sun, 28 Jan 2018 21:48:10 +0100</pubDate>
+      
+      <guid>hsvs/%E5%AE%89%E8%A3%85/cluster_intra/</guid>
+      <description> 适用场景 企业内网，IDC机房。 可以采用两种部署模式：
+1. 流量镜像模式；
+2. 直接在反向代理部署；
+3. 如果使用了HTTPS，可以结合1，2两种方案进行
+依赖  docker elasticsearch(建议版本&amp;gt;=5.0) kibana(建议版本&amp;gt;=5.0) 消息队列(推荐kafka, 如无可以使用redis替代) elasticsearch XPack插件(可选)  环境要求  镜像流量建议单独部署到物理机（根据实际情况内存需求&amp;gt;tps*3000 Byte)，如果流量过大需要使用网络分流器 kafka使用企业公共资源 (partation,broker数量根据流量调整) ElasticSearch使用企业公共资源(节点&amp;gt;=3, 本系统通过ElasticSearch Gateway接入)  部署拓扑图 获取程序 集群-内网版还在开放当中... 程序猿宝宝们正在紧急开发当中，留下您的联系方式，完成后第一时间通知您  
+ </description>
+    </item>
+    
+    <item>
+      <title>集群-公网版*</title>
+      <link>hsvs/%E5%AE%89%E8%A3%85/cluster_pub/</link>
+      <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
+      
+      <guid>hsvs/%E5%AE%89%E8%A3%85/cluster_pub/</guid>
+      <description>适用场景 租借服务器，跨机房或者业务在共有云上。
+获取程序 程序猿宝宝们正在紧急开发当中，留下您的联系方式，完成后第一时间通知您</description>
+    </item>
+    
+    <item>
+      <title>数据字典</title>
+      <link>hsvs/%E9%99%84%E5%BD%95/dict/</link>
+      <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
+      
+      <guid>hsvs/%E9%99%84%E5%BD%95/dict/</guid>
+      <description>数据字典   字段 类型 描述    @timestamp   date   字符串形式的时间戳，ES,Kibana使用     bodyb64   boolean   相应体是否使用base64处理（body传输时开启gzip会有此字段）    cap_ip   string   本记录抓取源网卡IP     cap_source   string   本记录抓取源网卡MAC地址     cap_timens   number   本记录抓取时刻秒以下时间ns     connectIP   ip   连接者IP     dst   ip   目的地址IP     extention   string   请求文件(URI)扩展名     geo_city   string   客户端地理位置-城市     geo_country   string   客户端地理位置-国家     kafka_pid   number   如果消息队列为kafka时, 本字段可以用来追踪消息均衡     raw_time   date   从网卡抓取到的UTC时间戳     realIP   ip   真实IP     realUrl   string   真实Url，不含参数     request.</description>
+    </item>
+    
+    <item>
+      <title>业务</title>
+      <link>hsvs/%E7%94%A8%E6%B3%95/work/</link>
+      <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
+      
+      <guid>hsvs/%E7%94%A8%E6%B3%95/work/</guid>
+      <description> 本文档重点不是kibana的使用教程，只是举了几个kibana使用的例子。
+业务场景 1.使用Kibana分析请求量及其变化趋势
+ 在kibana-&amp;gt;Visualize 点击+号新建 Vertical Bar 选择logstash-http-session-* index 在Split Series中选择Date Historgram作为聚合方式  2.使用kibana分析各域名访问量
+ 在kibana-&amp;gt;Visualize 点击+号新建 Pie 选择logstash-http-session-* index 在Split Slices中选择terms作为聚合方式， 并选择request.host作为Field  3.使用kibana分析HTTP服务状态比例
+ 在kibana-&amp;gt;Visualize 点击+号新建 Pie 选择logstash-http-session-* index 在Split Slices中选择terms作为聚合方式， 并选择response.code作为Field   分析各个城市活跃量(地图)
+在kibana-&amp;gt;Visualize 点击+号新建 Coordinate Map 选择logstash-http-session-* index 在Geo Coordinates 选择geo_location作为地图坐标   在kibana vi
+ 分析请求量TOP N的接口
+ 分析请求量TOP N的客户端IP
+ 其他&amp;hellip;
+  </description>
+    </item>
+    
+    <item>
+      <title>安全</title>
+      <link>hsvs/%E7%94%A8%E6%B3%95/security/</link>
+      <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
+      
+      <guid>hsvs/%E7%94%A8%E6%B3%95/security/</guid>
+      <description> 场景 1.使用流量发现WEBSHELL
+待更新  2.使用流量进行攻击检测
+待更新  3.使用流量进行登录监控
+待更新  </description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>hsvs/%E9%99%84%E5%BD%95/faq/</link>
+      <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
+      
+      <guid>hsvs/%E9%99%84%E5%BD%95/faq/</guid>
+      <description> 常见问题  怎么解决使用了HTTPS证书后无法获取加密的流量
+将HTTPS部署到反向代理上，通过反向代理之后卸载TLS流量；此时在通过在反向代理上利用端口过滤的方式拿出所需要的解密后的流量  是否支持GZIP?
+支持，默认情况下，对于静态资源的response.body会被drop掉内容。对于超长的会截断内容  kafka资源数量估计(kafka分区数，kafka broker数量)
+每个请求平均为1k，那么TPS * 1k = 实时流量 kafka broker数量 约等于 实时流量/kafka带宽/每机器分区数  ElasticSearch 资源需求
+ElasticSearch 内存限制了查询的数据量 ElasticSearch 硬盘限制存储的数据量  修改单机版ElasticSearch内存限制
+ps -ef 查看容器id 进入docker容器 docker exec -it &amp;lt;id&amp;gt; /bin/sh kill elasticsearch进程 修改/home/elasticsearch/elasticsearch/config/jvm.options文件字段: -Xmx=1G -Xms=1G 保存后重新启动ElasticSearch  过滤器
+目前端口过滤器用，在集群版里支持域名过滤器   </description>
+    </item>
+    
+    <item>
+      <title>联系我们</title>
+      <link>hsvs/%E9%99%84%E5%BD%95/contact/</link>
+      <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
+      
+      <guid>hsvs/%E9%99%84%E5%BD%95/contact/</guid>
+      <description>邮箱: q@shellpub.com</description>
+    </item>
+    
+    <item>
+      <title>分析接口</title>
+      <link>hsvs/%E7%94%A8%E6%B3%95/ana_interface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>hsvs/%E7%94%A8%E6%B3%95/ana_interface/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
