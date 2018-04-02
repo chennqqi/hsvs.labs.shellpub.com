@@ -1,6 +1,6 @@
 ---
 title: "单机版"
-date: 2018-01-28T21:48:10+01:00
+date: 2018-04-02T21:48:10+08:00
 anchor: "install_standalone"
 weight: 20
 ---
