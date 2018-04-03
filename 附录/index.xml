@@ -41,7 +41,8 @@ ps -ef 查看容器id 进入docker容器 docker exec -it &amp;lt;id&amp;gt; /bin
       <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
       
       <guid>/%E9%99%84%E5%BD%95/contact/</guid>
-      <description>邮箱: q@shellpub.com</description>
+      <description>关于我们 河马安全团队专注WEB安全研究，擅长webshell查杀技术。
+邮箱: q@shellpub.com</description>
     </item>
     
   </channel>

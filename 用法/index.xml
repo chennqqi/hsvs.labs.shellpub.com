@@ -38,7 +38,18 @@
       <description> 场景 1.使用流量发现WEBSHELL
 待更新  2.使用流量进行攻击检测
 待更新  3.使用流量进行登录监控
+待更新  4.使用流量进行用户行为画像
+待更新  5.使用流量追踪羊毛党
 待更新  </description>
+    </item>
+    
+    <item>
+      <title>数据接口</title>
+      <link>/%E7%94%A8%E6%B3%95/data_interface/</link>
+      <pubDate>Mon, 02 Apr 2018 21:57:08 +0100</pubDate>
+      
+      <guid>/%E7%94%A8%E6%B3%95/data_interface/</guid>
+      <description>近期开放</description>
     </item>
     
     <item>
