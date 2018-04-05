@@ -35,7 +35,7 @@ weight: 40
 ![](https://s1.ax1x.com/2018/04/02/CSi2sU.png)
 
 
-4. 分析各个城市活跃量(地图)
+4.分析各个城市活跃量(地图)
 
 	 	在kibana->Visualize 点击+号新建 Coordinate Map
 		选择logstash-http-session-* index

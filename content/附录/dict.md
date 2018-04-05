@@ -15,6 +15,11 @@ weight: 40
     <th width="60%", bgcolor=yellow>描述</th>
   </tr>
   <tr>
+    <td> id </td>
+    <td> string </td>
+    <td> 记录唯一标识，可以用来追踪原始的请求记录 </td>
+  </tr>
+  <tr>
     <td> @timestamp </td>
     <td> date </td>
     <td> 字符串形式的时间戳，ES,Kibana使用 </td>
