@@ -37,7 +37,7 @@ ES+kibna 分析展示模块</description>
  拉取镜像
 docker pull sort/hsvs-standalone:kibana5
  运行
-  docker run -d --privileged=true --net=host -p 5601:5601 -p 9200:9200 sort/hsvs-standalone:kibana5 -f &amp;#39;tcp port 80&amp;#39; -i eth0 -P docker参数说明 -d 让docker镜像以后台守护进程的方式运行 -p docker 端口，将docker内部的kibana和elasticsearch端口映射到主机 --privilged=true 开启root权限，允许docker程序抓包 --net=host 使用主机网络，这样docker里程序可以抓取主机流量 运行参数说明 -i &amp;lt;ethname&amp;gt; 指定网卡名称 -f &amp;lt;port filter&amp;gt; 可选， 指定过滤端口信息，如果不加此选项默认会处理所有端口，这个选项在https反代抓包时很有用，过滤器语法同tcpdump语法 -P 可选，开启混杂模式，在流量镜像模式抓包时使用，在主机抓包时请不要使用此选项   打开kibana即可访问</description>
+  docker run -d --privileged=true --net=host -p 5601:5601 -p 9200:9200 sort/hsvs-standalone:kibana5 -f &amp;#39;tcp port 80&amp;#39; -i eth0 -P docker参数说明 -d 让docker镜像以后台守护进程的方式运行 -p docker 端口，将docker内部的kibana 和elasticsearch端口映射到主机 --privilged=true 开启root权限，允许docker程序抓包 --net=host 使用主机网络，这样docker里程序可以抓取主机流量 运行参数说明 -i &amp;lt;ethname&amp;gt; 指定网卡名称 -f &amp;lt;port filter&amp;gt; 可选， 指定过滤端口信息， 如果不加此选项默认会处理所有端口， 这个选项在https反代抓包时很有用，过滤器语法同tcpdump语法 -P 可选，开启混杂模式，在流量镜像模式抓包时使用，  4.</description>
     </item>
     
     <item>
@@ -70,7 +70,7 @@ docker pull sort/hsvs-standalone:kibana5
       <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
       
       <guid>/%E9%99%84%E5%BD%95/dict/</guid>
-      <description>数据字典   字段 类型 描述    @timestamp   date   字符串形式的时间戳，ES,Kibana使用     bodyb64   boolean   相应体是否使用base64处理（body传输时开启gzip会有此字段）    cap_ip   string   本记录抓取源网卡IP     cap_source   string   本记录抓取源网卡MAC地址     cap_timens   number   本记录抓取时刻秒以下时间ns     connectIP   ip   连接者IP     dst   ip   目的地址IP     extention   string   请求文件(URI)扩展名     geo_city   string   客户端地理位置-城市     geo_country   string   客户端地理位置-国家     kafka_pid   number   如果消息队列为kafka时, 本字段可以用来追踪消息均衡     raw_time   date   从网卡抓取到的UTC时间戳     realIP   ip   真实IP     realUrl   string   真实Url，不含参数     request.</description>
+      <description>数据字典   字段 类型 描述    id   string   记录唯一标识，可以用来追踪原始的请求记录     @timestamp   date   字符串形式的时间戳，ES,Kibana使用     bodyb64   boolean   相应体是否使用base64处理（body传输时开启gzip会有此字段）    cap_ip   string   本记录抓取源网卡IP     cap_source   string   本记录抓取源网卡MAC地址     cap_timens   number   本记录抓取时刻秒以下时间ns     connectIP   ip   连接者IP     dst   ip   目的地址IP     extention   string   请求文件(URI)扩展名     geo_city   string   客户端地理位置-城市     geo_country   string   客户端地理位置-国家     kafka_pid   number   如果消息队列为kafka时, 本字段可以用来追踪消息均衡     raw_time   date   从网卡抓取到的UTC时间戳     realIP   ip   真实IP     realUrl   string   真实Url，不含参数     request.</description>
     </item>
     
     <item>

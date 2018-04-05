@@ -17,7 +17,7 @@
       <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
       
       <guid>/%E9%99%84%E5%BD%95/dict/</guid>
-      <description>数据字典   字段 类型 描述    @timestamp   date   字符串形式的时间戳，ES,Kibana使用     bodyb64   boolean   相应体是否使用base64处理（body传输时开启gzip会有此字段）    cap_ip   string   本记录抓取源网卡IP     cap_source   string   本记录抓取源网卡MAC地址     cap_timens   number   本记录抓取时刻秒以下时间ns     connectIP   ip   连接者IP     dst   ip   目的地址IP     extention   string   请求文件(URI)扩展名     geo_city   string   客户端地理位置-城市     geo_country   string   客户端地理位置-国家     kafka_pid   number   如果消息队列为kafka时, 本字段可以用来追踪消息均衡     raw_time   date   从网卡抓取到的UTC时间戳     realIP   ip   真实IP     realUrl   string   真实Url，不含参数     request.</description>
+      <description>数据字典   字段 类型 描述    id   string   记录唯一标识，可以用来追踪原始的请求记录     @timestamp   date   字符串形式的时间戳，ES,Kibana使用     bodyb64   boolean   相应体是否使用base64处理（body传输时开启gzip会有此字段）    cap_ip   string   本记录抓取源网卡IP     cap_source   string   本记录抓取源网卡MAC地址     cap_timens   number   本记录抓取时刻秒以下时间ns     connectIP   ip   连接者IP     dst   ip   目的地址IP     extention   string   请求文件(URI)扩展名     geo_city   string   客户端地理位置-城市     geo_country   string   客户端地理位置-国家     kafka_pid   number   如果消息队列为kafka时, 本字段可以用来追踪消息均衡     raw_time   date   从网卡抓取到的UTC时间戳     realIP   ip   真实IP     realUrl   string   真实Url，不含参数     request.</description>
     </item>
     
     <item>
