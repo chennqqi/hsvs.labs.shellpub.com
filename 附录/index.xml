@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>BUG追踪</title>
+      <link>/%E9%99%84%E5%BD%95/bug/</link>
+      <pubDate>Mon, 02 Apr 2018 21:57:07 +0800</pubDate>
+      
+      <guid>/%E9%99%84%E5%BD%95/bug/</guid>
+      <description> 单机版BUG追踪   id 状态 计划 描述    1   未修复   代码已修复，下个版本修复   命令行启动-P模式不被识别     2   未修复   计划修复中，预计下个版本修复   如果docker运行环境配置较差（例如超低配置的虚拟机），ES启动时间过久导致分析程序无法正常工作    集群BUG追踪 </description>
+    </item>
+    
+    <item>
       <title>FAQ</title>
       <link>/%E9%99%84%E5%BD%95/faq/</link>
       <pubDate>Mon, 02 Apr 2018 21:55:52 +0800</pubDate>
