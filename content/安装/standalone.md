@@ -36,7 +36,13 @@ weight: 20
 
 ## 获取程序
 
-	docker  pull sort/hsvs-standalone:kibana5
+官方源:
+
+	docker  pull sort/hsvs-standalone
+
+docker官方中国源(推荐):
+
+	docker pull registry.docker-cn.com/sort/hsvs-standalone
 
 ## 运行说明
 
@@ -44,13 +50,15 @@ weight: 20
 
 2. 拉取镜像
 
-	docker pull sort/hsvs-standalone:kibana5
+	docker pull sort/hsvs-standalone
+
+
 
 3. 运行
 
 ```python
 	
-	docker run -d --privileged=true --net=host -p 5601:5601 -p 9200:9200 sort/hsvs-standalone:kibana5 -f 'tcp port 80' -i eth0 -P
+	docker run -d --privileged=true --net=host -p 5601:5601 -p 9200:9200 sort/hsvs-standalone -f 'tcp port 80' -i eth0 -P
 
 ```
 
@@ -85,7 +93,6 @@ weight: 20
 	
 
 	注: 如果没有弹出择@timestamp, 点击refresh field几次，
-	如果多次尝试没有出现请检查安装环境是否有误
-
+	如果多次尝试没有出现请检查安装环境是否有误, 为了保证性能，此处采用批量提交，首次提交可能在1分钟之后，请耐心长还是
 
 		
