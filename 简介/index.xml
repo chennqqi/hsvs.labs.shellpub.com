@@ -23,5 +23,17 @@
 ES+kibna 分析展示模块</description>
     </item>
     
+    <item>
+      <title>更新历史</title>
+      <link>/%E7%AE%80%E4%BB%8B/2/</link>
+      <pubDate>Mon, 02 Apr 2018 21:48:10 +0800</pubDate>
+      
+      <guid>/%E7%AE%80%E4%BB%8B/2/</guid>
+      <description>单机版更新历史  2018-04-03 单机版 2018-04-09 单机版 v1.1  修复-P混杂模式选项不能识别的BUG 修复IO过低时ElasticSearch程序启动过慢导致处理程序无法正常启动的BUG   项目结构 抓取模块
+消息队列
+基础分析程序
+ES+kibna 分析展示模块</description>
+    </item>
+    
   </channel>
 </rss>

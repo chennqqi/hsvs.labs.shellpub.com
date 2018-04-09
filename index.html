@@ -37,6 +37,8 @@
             
                 <li><a href="#feature">功能特点</a></li>
             
+                <li><a href="#history">更新历史</a></li>
+            
         </ul>
     </li>
 
@@ -125,7 +127,7 @@
     </div>
 
     <div class="version">
-            generated on Apr 8, 2018
+            generated on Apr 9, 2018
     </div>
 </div>
 
@@ -177,6 +179,39 @@
 <li>真实IP提取</li>
 <li>智能状态码、UID、手机号</li>
 <li>支持流量镜像</li>
+</ul>
+
+<h2 id="项目结构">项目结构</h2>
+
+<p>抓取模块</p>
+
+<p>消息队列</p>
+
+<p>基础分析程序</p>
+
+<p>ES+kibna 分析展示模块</p>
+
+    </div>
+</section>
+
+            
+                <section class="page" id="history">
+    <h1>
+        <a href="#history">更新历史</a>
+    </h1>
+    <div class="content">
+        
+
+<h2 id="单机版更新历史">单机版更新历史</h2>
+
+<ul>
+<li>2018-04-03 单机版</li>
+<li>2018-04-09 单机版 v1.1
+
+<ul>
+<li>修复-P混杂模式选项不能识别的BUG</li>
+<li>修复IO过低时ElasticSearch程序启动过慢导致处理程序无法正常启动的BUG</li>
+</ul></li>
 </ul>
 
 <h2 id="项目结构">项目结构</h2>
@@ -259,7 +294,14 @@
 
 <h2 id="获取程序">获取程序</h2>
 
-<pre><code>docker  pull sort/hsvs-standalone:kibana5
+<p>官方源:</p>
+
+<pre><code>docker  pull sort/hsvs-standalone
+</code></pre>
+
+<p>docker官方中国源(推荐):</p>
+
+<pre><code>docker pull registry.docker-cn.com/sort/hsvs-standalone
 </code></pre>
 
 <h2 id="运行说明">运行说明</h2>
@@ -269,12 +311,12 @@
 
 <li><p>拉取镜像</p>
 
-<p>docker pull sort/hsvs-standalone:kibana5</p></li>
+<p>docker pull sort/hsvs-standalone</p></li>
 
 <li><p>运行</p></li>
 </ol>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    
-    <span style="color:#111">docker</span> <span style="color:#111">run</span> <span style="color:#f92672">-</span><span style="color:#111">d</span> <span style="color:#f92672">--</span><span style="color:#111">privileged</span><span style="color:#f92672">=</span><span style="color:#111">true</span> <span style="color:#f92672">--</span><span style="color:#111">net</span><span style="color:#f92672">=</span><span style="color:#111">host</span> <span style="color:#f92672">-</span><span style="color:#111">p</span> <span style="color:#ae81ff">5601</span><span style="color:#111">:</span><span style="color:#ae81ff">5601</span> <span style="color:#f92672">-</span><span style="color:#111">p</span> <span style="color:#ae81ff">9200</span><span style="color:#111">:</span><span style="color:#ae81ff">9200</span> <span style="color:#111">sort</span><span style="color:#f92672">/</span><span style="color:#111">hsvs</span><span style="color:#f92672">-</span><span style="color:#111">standalone</span><span style="color:#111">:</span><span style="color:#111">kibana5</span> <span style="color:#f92672">-</span><span style="color:#111">f</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;tcp port 80&#39;</span> <span style="color:#f92672">-</span><span style="color:#111">i</span> <span style="color:#111">eth0</span> <span style="color:#f92672">-</span><span style="color:#111">P</span></code></pre></div>
+    <span style="color:#111">docker</span> <span style="color:#111">run</span> <span style="color:#f92672">-</span><span style="color:#111">d</span> <span style="color:#f92672">--</span><span style="color:#111">privileged</span><span style="color:#f92672">=</span><span style="color:#111">true</span> <span style="color:#f92672">--</span><span style="color:#111">net</span><span style="color:#f92672">=</span><span style="color:#111">host</span> <span style="color:#f92672">-</span><span style="color:#111">p</span> <span style="color:#ae81ff">5601</span><span style="color:#111">:</span><span style="color:#ae81ff">5601</span> <span style="color:#f92672">-</span><span style="color:#111">p</span> <span style="color:#ae81ff">9200</span><span style="color:#111">:</span><span style="color:#ae81ff">9200</span> <span style="color:#111">sort</span><span style="color:#f92672">/</span><span style="color:#111">hsvs</span><span style="color:#f92672">-</span><span style="color:#111">standalone</span> <span style="color:#f92672">-</span><span style="color:#111">f</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;tcp port 80&#39;</span> <span style="color:#f92672">-</span><span style="color:#111">i</span> <span style="color:#111">eth0</span> <span style="color:#f92672">-</span><span style="color:#111">P</span></code></pre></div>
 <pre><code>docker参数说明
 
     -d 让docker镜像以后台守护进程的方式运行
@@ -307,7 +349,7 @@
 <p><img src="https://s1.ax1x.com/2018/04/05/C9b4VP.png" alt="" /></p>
 
 <pre><code>注: 如果没有弹出择@timestamp, 点击refresh field几次，
-如果多次尝试没有出现请检查安装环境是否有误
+如果多次尝试没有出现请检查安装环境是否有误, 为了保证性能，此处采用批量提交，首次提交可能在1分钟之后，请耐心长还是
 </code></pre>
 
     </div>
@@ -748,24 +790,39 @@
 
 <h2 id="单机版bug追踪">单机版BUG追踪</h2>
 
+<p>id， bug编号
+状态，是否已修复
+计划, 修复计划
+范围，受影响版本范围（单机版，集群版)</p>
+
 <table>
   <tr>
     <th width=10%, bgcolor=yellow >id</th>
     <th width=10%, bgcolor=yellow>状态</th>
+    <th width=10%, bgcolor=yellow>范围</th>
     <th width=20%, bgcolor=yellow>计划</th>
     <th width="60%", bgcolor=yellow>描述</th>
   </tr>
   <tr>
     <td> 1 </td>
-    <td> 未修复 </td>
-    <td> 代码已修复，下个版本修复 </td>
+    <td> 已修复 </td>
+    <td> 所有版本 </td>
+    <td> 已修复(>=1.1) </td>
     <td> 命令行启动-P模式不被识别 </td>
   </tr>
   <tr>
     <td> 2 </td>
-    <td> 未修复 </td>
-    <td> 计划修复中，预计下个版本修复 </td>
+    <td> 已修复 </td>
+    <td> 单机版 </td>
+    <td> 已修复(>=1.1) </td>
     <td> 如果docker运行环境配置较差（例如超低配置的虚拟机），ES启动时间过久导致分析程序无法正常工作 </td>
+  </tr>
+  <tr>
+    <td> 3 </td>
+    <td> 未修复 </td>
+    <td> 单机版，集群-公网版 </td>
+    <td> 计划修复中 </td>
+    <td> 当前环境下抓到的包丢包率较大，目前推测是消息中间件通信协议的BUG </td>
   </tr>
 </table>
 
