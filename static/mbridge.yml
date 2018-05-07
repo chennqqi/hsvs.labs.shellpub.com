@@ -1,0 +1,27 @@
+kafka_config:
+  kafka_topic: "http_session"
+  kafka_zookeeper: "10.0.0.11:2181,10.0.0.11:2181,10.0.0.3:2181"
+  kafka_group: "mbridge"
+  kafka_fromnewest: false
+#  kafka_compress: ""
+es_config:
+  es_host: "10.0.0.11"
+  es_engine: "ElasticClientV6"
+  es_port: 9200
+  es_interval: 512
+  es_prefix: "logstash-http-session-"
+  es_type: "test-type"
+  es_writedirect: true
+  es_timeout: "5s"
+nsq:
+  nsqds: [ "127.0.0.1:4150" ]
+  nsq_topic: "http_session"
+  nsq_channel: "main"
+redis:
+  addrs: ["10.0.0.12:6379"]
+  topic: "http_session"
+source: "kafka"
+worker: 0
+use_qqwryip: false
+use_geoip: true
+profile_host: ":10001"

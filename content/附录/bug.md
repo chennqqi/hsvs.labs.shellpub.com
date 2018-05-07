@@ -22,24 +22,38 @@ id， bug编号
   </tr>
   <tr>
     <td> 1 </td>
-    <td> 已修复 </td>
+    <td bgcolor="#28A745"> 已修复 </td>
     <td> 所有版本 </td>
     <td> 已修复(>=1.1) </td>
     <td> 命令行启动-P模式不被识别 </td>
   </tr>
   <tr>
     <td> 2 </td>
-    <td> 已修复 </td>
+    <td bgcolor="#28A745"> 已修复 </td>
     <td> 单机版 </td>
     <td> 已修复(>=1.1) </td>
     <td> 如果docker运行环境配置较差（例如超低配置的虚拟机），ES启动时间过久导致分析程序无法正常工作 </td>
   </tr>
   <tr>
     <td> 3 </td>
-    <td> 未修复 </td>
+    <td bgcolor="#28A745"> 已修复 </td>
     <td> 单机版，集群-公网版 </td>
-    <td> 计划修复中 </td>
-    <td> 当前环境下抓到的包丢包率较大，目前推测是消息中间件通信协议的BUG </td>
+    <td> 已修复(>=1.2) </td>
+    <td> 当前环境下抓到的包丢包率较大 </td>
+  </tr>
+  <tr>
+    <td> 4 </td>
+    <td bgcolor="#28A745"> 已修复 </td>
+    <td> 单机版，集群-公网版 </td>
+    <td> 已修复(>=1.2) </td>
+    <td> request.body 无法处理被gzip压缩过的数据 </td>
+  </tr>
+  <tr>
+    <td> 5 </td>
+    <td bgcolor="#28A745"> 已修复 </td>
+    <td> 单机版，集群-公网版 </td>
+    <td> 已修复(>=1.2) </td>
+    <td> release版程序抓包时空指针导致崩溃 </td>
   </tr>
 </table>
 
