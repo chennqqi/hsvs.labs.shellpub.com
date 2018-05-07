@@ -40,8 +40,99 @@ docker pull sort/hsvs-standalone
 1. 流量镜像模式；
 2. 直接在反向代理部署；
 3. 如果使用了HTTPS，可以结合1，2两种方案进行
-依赖  docker elasticsearch(建议版本&amp;gt;=5.0) kibana(建议版本&amp;gt;=5.0) 消息队列(推荐kafka, 如无可以使用redis替代) elasticsearch XPack插件(可选)  环境要求  镜像流量建议单独部署到物理机（根据实际情况内存需求&amp;gt;tps*3000 Byte)，如果流量过大需要使用网络分流器 kafka使用企业公共资源 (partation,broker数量根据流量调整) ElasticSearch使用企业公共资源(节点&amp;gt;=3, 本系统通过ElasticSearch Gateway接入)  部署拓扑图 获取程序 集群-内网版还在开放当中... 程序猿宝宝们正在紧急开发当中，留下您的联系方式，完成后第一时间通知您  
+依赖  docker elasticsearch(建议版本&amp;gt;=5.0) kibana(建议版本&amp;gt;=5.0) 消息队列(推荐kafka, 如无可以使用redis/nsq替代) elasticsearch XPack插件(可选)  环境要求  镜像流量建议单独部署到物理机（根据实际情况内存需求&amp;gt;tps*3000 Byte)，如果流量过大需要使用网络分流器 消息中间件kafka (可选nsq和redis) ElasticSearch 集群  节点描述  hcap 抓取模块，负责将http流还原成json数据 消息中间件(kafka/nsq/redis) mbridge，负责将json数据从消息中间件中处理写入ElasticSearch ElasticSearch + kibana 最终的消息存储和可视化的显示 analyzed(尚未开发完成) 负责实时分析流量，根据配置的（安全或者风控）规则出处命中结果到ElasticSearch  方案一(强烈建议), 使用kafka消息中间件部署拓扑图 优点: kafka吞吐率，稳定性，持久化很优秀，经过长期实践检验，kafka可以多group消费者同时消费一topic数据，方便自定义开发分析程序
+缺点: kafka部署较为麻烦，优先选择企业内部已经搭建好的kafka，最新版的kafka已经集成了zookeeper，如果需要自己搭建请参考http://kafka.apache.org/quickstart
+方案二， 使用nsq消息中间件部署拓扑图 优点: nsq是一个golang开发的消息中间件，部署简单，使用也简单，支持持久化，支持多group消费者消费同一topic数据。
+缺点: nsq设计理念是本地agent，所以如果在镜像流量机器上部署Agent容易出现吞吐率不够的问题。
+方案三， 使用redis做消息中间件部署拓扑图 优点: 部署简单，可以使用企业已有redis
+缺点: 目前hcap不支持写入集群，redis不支持多group订阅消费，无法自定义分析程序，且不支持持久化。
+获取程序 
  </description>
+    </item>
+    
+    <item>
+      <title>集群-内网版KAFKA部署</title>
+      <link>/%E5%AE%89%E8%A3%85/cluster_intra_kafka/</link>
+      <pubDate>Mon, 07 May 2018 10:42:17 +0800</pubDate>
+      
+      <guid>/%E5%AE%89%E8%A3%85/cluster_intra_kafka/</guid>
+      <description>HSVS-kafka方案 
+本文档适用于hcap:1.0,hsvs-mbridge:1.1.2 版本，此版本为当前latest分支
+拓扑图 绿色部分为HSVS提供
+蓝色部分需要用户自己安装或者使用企业已有资源
+安装步骤 1. 安装部署ElasitcSearch 和 Kibana 版本要求ElasticSearch(version &amp;gt;= 5.0.0)
+建议优先使用企业已有的ElasticSearch资源，这里给出一个elasticsearch集群搭建博客教程
+hsvs-mbridge 启动后会自动创建模板，无需手动创建索引和模板
+2. 安装部署kafka 版本要求kafka(version &amp;gt;= 0.8)
+建议优先使用企业已有的kafka资源，如果您需要自己搭建，请参考http://kafka.apache.org/quickstart
+创建kafka的topic http_sesssion
+bin/kafka-topics.sh --create --topic http_session --zookeeper &amp;lt;YOUR_ZK_HOST&amp;gt;:2181 --replication-factor 4 --partitions 4 
+--replication-factor 是设定副本数，这个决定故障时容错的能力和读取数据时的横向扩容速度； --partitions 设定分区数，决定写入时的最大能力  查看已经存创建的topic bin/kafka-topics.sh &amp;ndash;list &amp;ndash;zookeeper :2181
+3. 安装部署hsvs-mbridge 本程序是数据预处理模块，会将处理后的数据写入ElasticSearch。 本程序部署数量跟第2部中设定的kafka数量有关。需被整除，即hsvs-mbridge的部署数量乘以N(N为正整数)等于kafka创建的分区数。
+ 拉取镜像, 如果您内网的机器无法联网，可以使用docker save/load的方式导入到您的机器上
+docker pull hsvs-mbridge
+ 下载配置文件模板，修改成您实际环境中的配置
+wget mbridge.yml
+ 配置文件说明
+ kafka_config 字段配置与kafka相关属性
+kafka_zookeeper: &amp;quot;填写您所用kafka集群的zookeeper地址&amp;quot;  es_config 字段配置与elasticsearch有关属性</description>
+    </item>
+    
+    <item>
+      <title>集群-内网版NSQ部署</title>
+      <link>/%E5%AE%89%E8%A3%85/cluster_intra_nsq/</link>
+      <pubDate>Mon, 07 May 2018 10:42:17 +0800</pubDate>
+      
+      <guid>/%E5%AE%89%E8%A3%85/cluster_intra_nsq/</guid>
+      <description>HSVS-nsq方案 
+本文档适用于hcap:1.0,hsvs-mbridge:1.1.2 版本，此版本为当前latest分支
+拓扑图 绿色部分为HSVS提供
+蓝色部分需要用户自己安装或者使用企业已有资源
+安装步骤 1. 安装部署ElasitcSearch 和 Kibana 版本要求ElasticSearch(version &amp;gt;= 5.0.0)
+建议优先使用企业已有的ElasticSearch资源，这里给出一个elasticsearch集群搭建博客教程
+hsvs-mbridge 启动后会自动创建模板，无需手动创建索引和模板
+2. 安装部署nsq 官方文档https://nsq.io/overview/design.html
+每一台数据抓取点(hcap)的机器上均需要部署nsqd
+在抓取点之外选择2-3台机器部署nsqlookupd 和nsqadmin
+通过nsqadmin或者命令行创建nsq的topic
+3. 安装部署hsvs-mbridge 本程序是数据预处理模块，会将处理后的数据写入ElasticSearch。 本程序部署数量跟第2部中设定的kafka数量有关。需被整除，即hsvs-mbridge的部署数量乘以N(N为正整数)等于kafka创建的分区数。
+ 拉取镜像, 如果您内网的机器无法联网，可以使用docker save/load的方式导入到您的机器上
+docker pull hsvs-mbridge
+ 下载配置文件模板，修改成您实际环境中的配置
+wget mbridge.yml
+ 配置文件说明
+ nsq 字段配置与redis相关属性
+nsqlookupd_addrs: [ &amp;quot;10.0.0.1:4161&amp;quot;,&amp;quot;10.0.0.2:4161&amp;quot; ] #填写nsqlookup集群地址 nsq_topic: &amp;quot;http_session&amp;quot;  es_config 字段配置与elasticsearch有关属性
+es_host: &amp;quot;填写ElasticMaster Node的IP地址&amp;quot;  source: 字段设定数据源，使用nsq时，此处应该填写&amp;rdquo;nsq&amp;rdquo;
+   我们假定您的配置文件存储路径位于/opt/mbridge.yml
+ 启动mbridge
+docker run --net=host --rm -e ELASTICSEARCH_URL=http://&amp;lt;YOUR_ES_MASTER_HOST&amp;gt;:9200/ -v /opt/mbridge.</description>
+    </item>
+    
+    <item>
+      <title>集群-内网版REDIS部署</title>
+      <link>/%E5%AE%89%E8%A3%85/cluster_intra_redis/</link>
+      <pubDate>Mon, 07 May 2018 10:42:17 +0800</pubDate>
+      
+      <guid>/%E5%AE%89%E8%A3%85/cluster_intra_redis/</guid>
+      <description>HSVS-reids方案 
+本文档适用于hcap:1.0,hsvs-mbridge:1.1.2 版本，此版本为当前latest分支
+拓扑图 绿色部分为HSVS提供
+蓝色部分需要用户自己安装或者使用企业已有资源
+安装步骤 1. 安装部署ElasitcSearch 和 Kibana 版本要求ElasticSearch(version &amp;gt;= 5.0.0)
+建议优先使用企业已有的ElasticSearch资源，这里给出一个elasticsearch集群搭建博客教程
+hsvs-mbridge 启动后会自动创建模板，无需手动创建索引和模板
+2. 安装部署redis yum install redis 配置redis监听0.0.0.0  3. 安装部署hsvs-mbridge  拉取镜像, 如果您内网的机器无法联网，可以使用docker save/load的方式导入到您的机器上
+docker pull hsvs-mbridge
+ 下载配置文件模板，修改成您实际环境中的配置
+wget mbridge.yml
+ 配置文件说明
+ redis 字段配置与redis相关属性
+addrs: [&amp;quot;10.0.0.12:6379&amp;quot;] #填写您的redis地址  es_config 字段配置与elasticsearch有关属性
+es_host: &amp;quot;填写ElasticMaster Node的IP地址&amp;quot;  source: 字段设定数据源，使用redis时，此处应该填写&amp;rdquo;redis&amp;rdquo;
+   我们假定您的配置文件存储路径位于/opt/mbridge.yml
+ 启动mbridge
+docker run --net=host --rm -e ELASTICSEARCH_URL=http://&amp;lt;YOUR_ES_MASTER_HOST&amp;gt;:9200/ -v /opt/mbridge.yml:/hsvs/mbridge/mbridge.yml:ro sort/hsvs-mbridge   此处必须指定ELASTICSEARCH_URL传递ElasticSearch地址给hsvs-mbridge，来创建template模板</description>
     </item>
     
     <item>

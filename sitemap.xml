@@ -28,8 +28,23 @@
   </url>
   
   <url>
+    <loc>/%E5%AE%89%E8%A3%85/cluster_intra_kafka/</loc>
+    <lastmod>2018-05-07T10:42:17+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/%E7%AE%80%E4%BB%8B/2/</loc>
     <lastmod>2018-04-02T21:48:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/%E5%AE%89%E8%A3%85/cluster_intra_nsq/</loc>
+    <lastmod>2018-05-07T10:42:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/%E5%AE%89%E8%A3%85/cluster_intra_redis/</loc>
+    <lastmod>2018-05-07T10:42:17+08:00</lastmod>
   </url>
   
   <url>
