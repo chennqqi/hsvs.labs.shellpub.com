@@ -72,7 +72,7 @@ bin/kafka-topics.sh --create --topic http_session --zookeeper &amp;lt;YOUR_ZK_HO
  拉取镜像, 如果您内网的机器无法联网，可以使用docker save/load的方式导入到您的机器上
 docker pull hsvs-mbridge
  下载配置文件模板，修改成您实际环境中的配置
-wget mbridge.yml
+wget labs.shellpub.com/hsvs/mbridge.yml
  配置文件说明
  kafka_config 字段配置与kafka相关属性
 kafka_zookeeper: &amp;quot;填写您所用kafka集群的zookeeper地址&amp;quot;  es_config 字段配置与elasticsearch有关属性</description>
@@ -99,7 +99,7 @@ hsvs-mbridge 启动后会自动创建模板，无需手动创建索引和模板
  拉取镜像, 如果您内网的机器无法联网，可以使用docker save/load的方式导入到您的机器上
 docker pull hsvs-mbridge
  下载配置文件模板，修改成您实际环境中的配置
-wget mbridge.yml
+wget labs.shellpub.com/hsvs/mbridge.yml
  配置文件说明
  nsq 字段配置与redis相关属性
 nsqlookupd_addrs: [ &amp;quot;10.0.0.1:4161&amp;quot;,&amp;quot;10.0.0.2:4161&amp;quot; ] #填写nsqlookup集群地址 nsq_topic: &amp;quot;http_session&amp;quot;  es_config 字段配置与elasticsearch有关属性
@@ -125,7 +125,7 @@ hsvs-mbridge 启动后会自动创建模板，无需手动创建索引和模板
 2. 安装部署redis yum install redis 配置redis监听0.0.0.0  3. 安装部署hsvs-mbridge  拉取镜像, 如果您内网的机器无法联网，可以使用docker save/load的方式导入到您的机器上
 docker pull hsvs-mbridge
  下载配置文件模板，修改成您实际环境中的配置
-wget mbridge.yml
+wget labs.shellpub.com/hsvs/mbridge.yml
  配置文件说明
  redis 字段配置与redis相关属性
 addrs: [&amp;quot;10.0.0.12:6379&amp;quot;] #填写您的redis地址  es_config 字段配置与elasticsearch有关属性
