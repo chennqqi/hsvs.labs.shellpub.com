@@ -42,7 +42,7 @@ weight: 20
 
 优点: kafka吞吐率，稳定性，持久化很优秀，经过长期实践检验，kafka可以多group消费者同时消费一topic数据，方便自定义开发分析程序
 
-缺点: kafka部署较为麻烦，优先选择企业内部已经搭建好的kafka，最新版的kafka已经集成了zookeeper，如果需要自己搭建请参考<http://kafka.apache.org/quickstart>
+缺点: kafka部署较为麻烦，优先选择企业内部已经搭建好的kafka
 
 
 ![](https://s1.ax1x.com/2018/04/02/CSPyuD.png)
@@ -51,7 +51,7 @@ weight: 20
 
 优点: nsq是一个golang开发的消息中间件，部署简单，使用也简单，支持持久化，支持多group消费者消费同一topic数据。
 
-缺点: nsq设计理念是本地agent，所以如果在镜像流量机器上部署Agent容易出现吞吐率不够的问题。
+缺点: nsq设计理念是本地agent，所以如果在镜像流量机器上部署Agent容易出现吞吐率不够的情况。
 
 
 ## 方案三， 使用redis做消息中间件部署拓扑图
